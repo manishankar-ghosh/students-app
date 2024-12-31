@@ -24,7 +24,7 @@ export class ListComponent implements OnInit {
   async getList(): Promise<Student[]>{
     let data: Student[] = [];
     try{
-      let response = await firstValueFrom(this.apiService.get('Students/GetAll'));
+      let response = await firstValueFrom(this.apiService.get('Students'));
       data = <Student[]>response;
     }
     catch(error){

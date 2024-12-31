@@ -1,5 +1,15 @@
+<form>
 <fieldset>
     <legend><b>Student Detail</b></legend>
-    <p>Id: {{id}}</p>
+    <label for="txtId">Id: </label>
+    <input type="text" name="txtId" [ngModel] = "data?.id" [disabled]="true" /><br />    
+    <label for="txtName">Name: </label>
+    <input type="text" name="txtName" [(ngModel)] = "data!.name" /><br />
+    <label for="txtDob">DOB: </label>
+    <input type="text" name="txtDob" [(ngModel)] = "data!.dob" /><br /><br />
+    
+    <button name="btnUpdate" (click)="update()" >Update</button>
+    <span name="msg">{{msg}}</span>
 </fieldset>
+</form>
 
