@@ -1,0 +1,12 @@
+<fieldset>
+    <legend><b>Students List</b></legend>
+    <table>
+        <tr *ngFor="let s of lst">
+            <!-- <td><a [routerLink]="['/details', s.id]">{{s.id}}</a> </td> -->
+            <td><a [routerLink]="['', { outlets: { 'outlet2': ['details', s.id] } }]" >{{s.id}}</a> </td>
+            <td>{{s.name}}</td>
+            <td>{{s.dob}}</td>
+        </tr>
+    </table>
+</fieldset>
+

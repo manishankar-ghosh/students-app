@@ -1,0 +1,19 @@
+<a routerLink="list">List</a> &nbsp;
+<!-- <a [routerLink]="['details',id]">Details</a> -->
+<a [routerLink]="[{ outlets: { 'outlet2': ['details', 123] } }]" routerLinkActive="active">Details</a>
+
+<!-- <a routerLink="details">Details</a> -->
+<br />
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+<div>
+  <router-outlet name="outlet2"></router-outlet>
+</div>
+Title: {{ n == 50 ? n + 1 : n -1 }}
+<input type="text" value={{n+1}} [disabled]="isDisabled" />
+<ul>
+  <li *ngFor="let i of [1,2,3,4,5]">{{i}}</li>
+</ul>
+Hello
